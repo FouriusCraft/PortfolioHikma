@@ -52,7 +52,7 @@ img {
 .brand {
   color: var(--ink);
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 nav {
@@ -60,7 +60,7 @@ nav {
   gap: 20px;
   color: var(--muted);
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 nav a:hover {
@@ -85,7 +85,7 @@ main {
   margin: 0 0 18px;
   color: #79a4ff;
   font-size: 14px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
@@ -100,7 +100,7 @@ p {
 h1 {
   max-width: 720px;
   margin-bottom: 24px;
-  font-size: clamp(46px, 6vw, 76px);
+  font-size: clamp(36px, 4.5vw, 54px);
   line-height: 1.05;
   letter-spacing: 0;
 }
@@ -110,7 +110,7 @@ h1 {
   margin-bottom: 24px;
   color: var(--muted);
   font-size: 19px;
-  font-weight: 700;
+  font-weight: 450;
 }
 
 .chips {
@@ -128,11 +128,12 @@ h1 {
   border-radius: 999px;
   background: var(--blue-soft);
   color: var(--blue);
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .hero-actions,
-.project-actions {
+.project-actions,
+.contact-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -148,7 +149,7 @@ h1 {
   border-radius: 8px;
   color: var(--ink);
   background: white;
-  font-weight: 900;
+  font-weight: 600;
   box-shadow: 0 10px 24px rgba(47, 109, 246, 0.08);
 }
 
@@ -196,7 +197,7 @@ h1 {
   margin-bottom: 8px;
   color: #86aaff;
   font-size: 13px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -209,7 +210,7 @@ h1 {
 
 .spotlight span {
   color: var(--muted);
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .stats {
@@ -246,14 +247,16 @@ h1 {
 .proof-grid p,
 .more-projects p,
 .contact p,
-.project-content li {
+.project-content li,
+.experience-card p,
+.experience-card li {
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .link-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 14px;
   margin-bottom: 82px;
 }
@@ -263,18 +266,22 @@ h1 {
   align-items: center;
   justify-content: center;
   min-height: 58px;
-  border: 1px solid #cfe0ff;
+  border: 2px solid #cfe0ff;
   border-radius: 8px;
   background: var(--blue-faint);
   color: var(--blue);
-  font-weight: 900;
+  font-weight: 600;
   text-align: center;
+  box-shadow: 0 8px 20px rgba(47, 109, 246, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .link-strip a:hover {
   border-color: var(--blue);
   background: var(--blue);
   color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(47, 109, 246, 0.12);
 }
 
 .section-heading {
@@ -324,7 +331,7 @@ h1 {
   margin-bottom: 10px;
   color: var(--blue) !important;
   font-size: 13px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -343,7 +350,7 @@ h1 {
 
 .proof-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 1fr;
   gap: 28px;
 }
 
@@ -353,7 +360,8 @@ h1 {
 
 .proof-grid img {
   width: 100%;
-  height: 250px;
+  height: auto;
+  max-height: 580px;
   object-fit: cover;
 }
 
@@ -402,7 +410,7 @@ h1 {
   display: inline-flex;
   margin-top: 8px;
   color: var(--blue);
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .text-link:hover {
@@ -428,7 +436,8 @@ h1 {
   .project,
   .project.merdeka,
   .proof-grid,
-  .more-projects {
+  .more-projects,
+  .experience-grid {
     grid-template-columns: 1fr;
   }
 
@@ -448,6 +457,7 @@ h1 {
   .project-media img {
     min-height: 300px;
   }
+
 
   .contact {
     align-items: flex-start;
@@ -481,7 +491,8 @@ h1 {
 
   .button,
   .hero-actions,
-  .project-actions {
+  .project-actions,
+  .contact-actions {
     width: 100%;
   }
 
@@ -496,5 +507,143 @@ h1 {
   .project-content,
   .contact {
     padding: 24px;
+  }
+}
+
+.instagram-feed {
+  padding-bottom: 88px;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+
+.instagram-grid iframe,
+.instagram-grid .instagram-media {
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  min-width: 320px !important;
+}
+
+.experience-section {
+  padding-bottom: 88px;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+}
+
+.experience-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 30px rgba(36, 77, 143, 0.07);
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.experience-card h3 {
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.1;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.experience-item h4 {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.experience-item .company {
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+.experience-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  margin-top: auto;
+}
+
+/* Frame untuk foto dokumentasi yang resolusinya kecil / portrait:
+   foto ditampilkan utuh (contain) di atas latar netral, tidak dizoom paksa. */
+.experience-media {
+  position: relative;
+  isolation: isolate;
+  margin: 20px 0 0;
+  padding: 16px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #e8eef9;
+}
+
+/* Latar blur mengisi frame lebar tanpa memaksa foto portrait menjadi gepeng. */
+.experience-media::before {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  z-index: -1;
+  background: linear-gradient(rgba(18, 34, 53, 0.28), rgba(18, 34, 53, 0.28)),
+    url("assets/agate-studio.png") center / cover no-repeat;
+  filter: blur(18px);
+  transform: scale(1.08);
+}
+
+.experience-media img {
+  width: auto;
+  max-width: 100%;
+  height: 348px;
+  max-height: none;
+  margin-top: 0;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 12px 34px rgba(18, 34, 53, 0.24);
+}
+
+.experience-card img.cert-photo {
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 940px) {
+  .experience-media {
+    min-height: 340px;
+  }
+
+  .experience-media img {
+    height: 308px;
+  }
+}
+
+@media (max-width: 560px) {
+  .experience-media {
+    min-height: 300px;
+    padding: 12px;
+  }
+
+  .experience-media img {
+    height: 276px;
   }
 }
