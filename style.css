@@ -387,7 +387,7 @@ nav { gap: 23px; color: var(--teal-deep); font-size: 13px; }
 .education-collage { position: relative; height: 430px; overflow: hidden; background: #f7f3ee; }
 .education-collage img { position: absolute; display: block; object-fit: cover; box-shadow: 0 8px 24px rgba(35,10,17,.16); }
 .education-collage .education-fieldwork { top: 0; right: 0; width: 72%; height: 36%; }
-.education-collage .education-graduation { bottom: 0; left: 0; z-index: 3; width: 58%; height: 83%; object-fit: contain; object-position: bottom center; background: white; box-shadow: none; }
+.education-collage .education-graduation { bottom: 0; left: 0; z-index: 3; width: 58%; height: 83%; object-fit: contain; object-position: bottom center; background: transparent; box-shadow: none; }
 .education-collage .education-community { top: 35%; right: 0; z-index: 1; width: 60%; height: 34%; }
 .education-collage .education-caving { right: 0; bottom: 0; z-index: 2; width: 35%; height: 42%; object-position: center 70%; }
 .education-photo figcaption { padding: 11px 14px; background: rgba(255,255,255,.09); color: rgba(255,255,255,.72); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
